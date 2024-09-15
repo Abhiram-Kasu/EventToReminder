@@ -40,7 +40,8 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            navigationTitle("Calendar to Reminder")
+            Text("Event to Reminder")
+            
             if loading {
                 ProgressView()
             } else {
@@ -103,7 +104,7 @@ struct ContentView: View {
         }
         .overlay {
             if isProcessing {
-                Color.black.opacity(0.9)
+                Color.black.opacity(0.25)
                     .ignoresSafeArea()
                     .overlay(
                         VStack {
